@@ -29,11 +29,3 @@ class welcome extends AppController{
 
 }
 ?>
-
-
-<!-- if(strpos($_SERVER["REQUEST_URI"], $data["pagename"]) !== false ){
-    str_replace("inactive", "active", "id='inactive'");
-}else{
-    str_replace("active", "inactive", "id='active'");
-} -->
-

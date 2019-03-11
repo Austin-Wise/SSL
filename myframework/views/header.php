@@ -1,6 +1,8 @@
 <html>
 <head>
     <title>SSL Workpage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <style>
 
         /* primary colors: #30011E, #D7FCD4, #B6CCA1, #B68F40, #545454 */
@@ -9,10 +11,10 @@
             box-sizing: border-box;
             font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono";
         }
-        #body{
-            margin: 2rem 4rem;
+        .body{
+            margin: 4rem;
         }
-        nav .current{
+        nav .active{
             color: #30011E;
         }
         a, #sep{
@@ -27,15 +29,14 @@
         footer{
             position: absolute;
             bottom: 0;
-            margin-top: 1rem;
-            padding: 1rem 4rem;
             background-color: #545454;
             width: 100%;
         }
 
     </style>
 </head>
-<section id="body">
+<body>
+<section class="body">
 <header>
 <h2><?echo $data["pagename"];?> section</h2>
 

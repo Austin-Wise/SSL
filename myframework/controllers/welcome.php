@@ -23,7 +23,7 @@ class welcome extends AppController{
         $data["navigation"] = $this->parent->nav;
         $this->parent->getView("navigation", $data);
         $this->parent->getView("header", $data);
-        $this->parent->getView("body_about");
+        $this->parent->getView("body_home");
         $this->parent->getView("footer");
     }
 

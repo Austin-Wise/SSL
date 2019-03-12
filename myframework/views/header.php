@@ -11,9 +11,6 @@
             box-sizing: border-box;
             font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono";
         }
-        .body{
-            margin: 4rem;
-        }
         nav .active{
             color: #30011E;
         }
@@ -32,12 +29,21 @@
             background-color: #545454;
             width: 100%;
         }
+        .down{
+            position: relative;
+            top: 100px;
+        }
+        .carousel {
+            width:70vw;
+            height:20vh;
+            overflow: hidden;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+        .carousel-inner img {
+            margin: auto;
+        }
 
     </style>
 </head>
 <body>
-<section class="body">
-<header>
-<h2><?echo $data["pagename"];?> section</h2>
-
-</header>

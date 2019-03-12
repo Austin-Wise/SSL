@@ -6,25 +6,30 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-<?
-foreach($data["navigation"] as $key=>$link){
 
-    $a = "";
-    $s = "";
-    if($_SERVER['REQUEST_URI'] == $link){
-        $a = "active";
-        $s = "<span class='sr-only'>(current)</span>";
+            
+<?
+    foreach($data["navigation"] as $key=>$link){
+
+        $a = "";
+        $s = "";
+        if($_SERVER['REQUEST_URI'] == $link){
+            $a = "active";
+            $s = "<span class='sr-only'>(current)</span>";
+        }
+        echo 
+        "<li class='nav-item ".$a."'>
+            <a href='".$link."' class='nav-link'>"
+            .strtoupper($key).$s.
+            "</a>
+        </li>";
     }
-    echo 
-    "<li class='nav-item ".$a."'>
-        <a href='".$link."' class='nav-link'>"
-        .strtoupper($key).$s.
-        "</a>
-    </li>";
-}
 ?>
+
+
             </ul>
         </div>
     </div>
 </nav >
+<div class="container down">
 

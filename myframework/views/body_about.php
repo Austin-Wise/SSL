@@ -1,4 +1,45 @@
-<section class="body">
-<p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</p>
-</section>
-</section>
+<div class="container">
+
+<div class="progress mb-5">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+</div>
+<div class="row">
+      <div class="col-md-4 mb-5">
+        <div class="card h-50">
+          <div class="card-body">
+            <h2 class="card-title">Card One</h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary btn-sm">More Info</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-50">
+          <div class="card-body">
+            <h2 class="card-title">Card Two</h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary btn-sm">More Info</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-50">
+          <div class="card-body">
+            <h2 class="card-title">Card Three</h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary btn-sm">More Info</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+
+    </div>
+    </div>

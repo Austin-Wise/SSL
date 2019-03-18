@@ -23,15 +23,18 @@
             padding: 1rem .5rem;
             width: 100%;
         }
-        footer{
-            position: absolute;
-            bottom: 0;
-            background-color: #545454;
-            width: 100%;
-        }
         .down{
             position: relative;
-            top: 100px;
+            bottom: -5rem;
+        }
+        body{
+            height: 100vh;
+        }
+        footer{
+            position: absolute;
+
+            width: 100%;
+            bottom: -5rem;
         }
         .carousel {
             width:70vw;
@@ -86,8 +89,8 @@ if (@$_REQUEST["msg"]) {
 ?>
             </span>
             <?if (@$_SESSION["loggedin"] && @$_SESSION["loggedin"] == 1) {?>
-                <form class="navbar-form navbar-right">
-                    <a href="/profile">Profile</a>
+                <form class="navbar-form navbar-right ml-3">
+                    <a href="/profile">Profile</a> | 
                     <a href="/auth/logout">Logout</a>
                 </form>
                 

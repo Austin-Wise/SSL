@@ -7,7 +7,7 @@ class AppController{
     public function __construct($urlPathParts,$config)
     {
 
-        $this->nav = ["Home"=>"/", "About"=>"/welcome/about", "Form"=>"/form",
+        $this->nav = ["Home"=>"/", "Form"=>"/form",
         "Ajax"=>"/ajax", "CRUD" =>"/crud", "API"=>"/api"];
 
 
@@ -57,9 +57,6 @@ class AppController{
 
 
     }
-
-
-
 
 
 

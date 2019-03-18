@@ -47,3 +47,64 @@
     </style>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+
+            
+<?
+    foreach($data["navigation"] as $key=>$link){
+
+        $a = "";
+        $s = "";
+        if($_SERVER['REQUEST_URI'] == $link){
+            $a = "active";
+            $s = "<span class='sr-only'>(current)</span>";
+        }
+        echo 
+        "<li class='nav-item ".$a."'>
+            <a href='".$link."' class='nav-link'>"
+            .strtoupper($key).$s.
+            "</a>
+        </li>";
+    }
+?>
+            </ul>
+            <span style="color: red">
+<?
+// @$_REQUEST["msg"] ? @$_REQUEST["msg"] : "";
+if (@$_REQUEST["msg"]) {
+    echo @$_REQUEST["msg"];
+} else {
+    echo "";
+}
+?>
+            </span>
+            <?if (@$_SESSION["loggedin"] && @$_SESSION["loggedin"] == 1) {?>
+                <form class="navbar-form navbar-right">
+                    <a href="/profile">Profile</a>
+                    <a href="/auth/logout">Logout</a>
+                </form>
+                
+            <?} else {?>
+                    <form class="navbar-form navbar-right" role="search" method="POST" action="/auth/login">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="username" placeholder="Username" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="password" placeholder="Password" />
+                        </div>
+                        <button type="submit" class="btn btn-default">Sign In</button>
+                    </form>
+                
+            <?}?>
+        </div>
+        </div>
+    </div>
+</nav >
+<div class="container down">

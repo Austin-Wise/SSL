@@ -9,14 +9,17 @@ class form extends AppController{
         $data = array();
         $data["pagename"] = "form";
 
+        $random = substr( md5(rand()), 0, 7 );
+        $data["cap"] = $random;
+
         $data["navigation"] = $this->parent->nav;
-        $this->parent->getView("navigation", $data);
         $this->parent->getView("header", $data);
-        $this->parent->getView("body_form");
+		$this->getView("body_form", $data);
         $this->parent->getView("footer");
     }
 
     public function received(){
+        if($_POST["cap"] == $_SESSION["cap"]){
         $data = array();
         $data["pagename"] = "form";
 
@@ -57,6 +60,9 @@ class form extends AppController{
             echo "<script type='text/javascript'>alert('Welcome!')</script>";
             echo "<script type='text/javascript'>window.document.location.href='/welcome'</script>";
         }
+    }else{
+        echo "captcha incorrect";
+    }
 
     }
 
@@ -69,6 +75,19 @@ class form extends AppController{
             }
         }else{
             echo "Invalid Username / Password";
+        }
+    }
+
+    public function showUpload(){
+        $this->getView("body_uploadForm");
+        $this->parent->getView("footer");
+    }
+
+    public function uploadAction(){
+        if (move_uploaded_file($_FILES["myfile"]["tmp_name"], "./assets/".$_FILES["myfile"]["name"])) {
+            echo "The file ". basename( $_FILES["myfile"]["name"]). " has been uploaded.";
+        } else {
+            echo "Sorry, there was an error uploading your file.";
         }
     }
 }

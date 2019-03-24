@@ -34,7 +34,7 @@
             position: absolute;
 
             width: 100%;
-            bottom: -5rem;
+            bottom: -6rem;
         }
         .carousel {
             width:70vw;

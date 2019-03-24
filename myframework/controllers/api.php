@@ -1,11 +1,13 @@
 <?
 class api extends AppController{
     public function __construct($parent){
+
         $this->parent=$parent;
         //var_dump($this->parent);
         
     }
     public function index(){
+        
         $data = array();
         $data["pagename"] = "api";
 

@@ -11,7 +11,7 @@ class AppController{
         "Ajax"=>"/ajax", "CRUD" =>"/crud", "API"=>"/api"];
 
 
-        //$this->db = new PDO("mysql:dbname=".$config["dbname"].";",$config["dbuser"],$config["dbpass"]);
+        $this->db = new PDO("mysql:dbname=".$config["dbname"].";",$config["dbuser"],$config["dbpass"]);
       
         $this->urlPathParts = $urlPathParts;
 
@@ -24,8 +24,7 @@ class AppController{
 
             if (isset($urlPathParts[1])) {
            
-                $appcon->$urlPathParts[1]();
-                
+                $appcon->$urlPathParts[1]();     
                     
             }else{
            		
@@ -41,8 +40,11 @@ class AppController{
 
             include './controllers/' . $config['defaultController'] . ".php";
             $appcon = new $config['defaultController']($this);
+
             if (isset($urlPathParts[1])) {
+
                 $appcon->config['defaultController'][1]();
+                
             }else{
            		
            		$methodVariable = array($appcon, 'index');

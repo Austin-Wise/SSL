@@ -8,7 +8,7 @@ class AppController{
     {
 
         $this->nav = ["Home"=>"/", "Form"=>"/form",
-        "Ajax"=>"/ajax", "CRUD" =>"/crud", "API"=>"/api"];
+        "Ajax"=>"/ajax", "CRUD" =>"/crud", "API"=>"/api/showApi"];
 
 
         $this->db = new PDO("mysql:dbname=".$config["dbname"].";",$config["dbuser"],$config["dbpass"]);

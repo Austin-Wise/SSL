@@ -1,21 +1,27 @@
 <?
+
 class api extends AppController{
     public function __construct($parent){
-
-        $this->parent=$parent;
-        //var_dump($this->parent);
-        
+        $this->parent = $parent;
     }
-    public function index(){
-        
+    public function showApi($term = "Harry Potter and"){
         $data = array();
-        $data["pagename"] = "api";
-
+        $data["pagename"] = "Api";
         $data["navigation"] = $this->parent->nav;
         $this->parent->getView("header", $data);
-        $this->parent->getView("body_api");
+        $data = $this->parent->getModel("apiModel")->googleBooks($term);
+
+        $this->getView("body_api", $data);
+
         $this->parent->getView("footer");
     }
-
 }
+
 ?>
+
+
+
+
+
+
+

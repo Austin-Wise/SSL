@@ -1,6 +1,6 @@
 <form action="/crud/updateAction" method="POST">
     <?
-    $data = $this->parent->getModel('fruits')->read('SELECT * FROM fruit_table WHERE id = :id', array(
+    $data = $this->parent->getModel('fruits')->read('select * from fruit_table where id = :id', array(
       ":id" => $_REQUEST['id']
     ));
     ?>

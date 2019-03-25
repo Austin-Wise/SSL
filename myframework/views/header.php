@@ -78,6 +78,7 @@
     }
 ?>
             </ul>
+            
             <span style="color: red">
 <?
 // @$_REQUEST["msg"] ? @$_REQUEST["msg"] : "";

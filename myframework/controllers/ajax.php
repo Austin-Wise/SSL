@@ -11,7 +11,7 @@ class ajax extends AppController{
 
         $data["navigation"] = $this->parent->nav;
         $this->parent->getView("header", $data);
-        $this->parent->getView("body_ajax");
+        $this->parent->getView("ajax");
         $this->parent->getView("footer");
     }
 
